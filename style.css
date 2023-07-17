@@ -7,18 +7,86 @@
     overflow-x: hidden;
 }
 
-.header {
+.heading {
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     object-fit: cover;
     overflow: hidden;
 
 }
+.title {
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+#logo{
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    width: 165px;
+    height: 20px;
+}
+.title *{
+    background-color: rgba(255, 255, 255, 0);
+}
+.list{
+    display: flex;
+    position: absolute;
+    width: 70%;
+    left: 300px;
+    top:25px;
 
-.header * {
+}
+.list li{
+    border: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    padding : 20px 0px 0px 0px;
+    font-size: 14px;
+}
+u{
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+}
+.heading *,.header *{
     background-color: transparent;
 }
-
+.header{
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    height: 1000px;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 130px;;
+}  
+.order{
+    position: absolute;
+    /* background-color: green; */
+    width: 100%;
+    height: 170px;
+}
+.order h2{
+    font-size: 50px;
+    text-align: center;
+}
+.sub{
+    position: absolute;
+    top: 100px;
+    /* background-color: rgb(55, 0, 255); */
+    width: 100%;
+    height: 140px;
+}
+.sub p{
+    text-align: center;
+    padding: 10px 400px;
+    font-size: 13px;
+}
 
 #h:checked  + .menu {
     transform: translateX(-130px);
@@ -48,7 +116,7 @@
   }
 
 
-  #h:not(:checked) ~ div {
+  #h:not(:checked) ~ div.slidebar {
     z-index: -1;
     opacity: 0;
     transition: .1S transform ease-in ,.3s z-index  ease-in ,.3s opacity ease-in;
@@ -76,7 +144,7 @@
 .white{
     position: absolute;
     background: rgba(250, 250, 250, 0.171);
-    height: 1000vh;
+    height: 1045vh;
     width: 203.3vh;
     z-index: 1;
 }
@@ -145,7 +213,35 @@ li{
 
 #img1 {
     width: 100%;
-    height: 100vh;
+    height: 120vh;
+
+}
+.service{
+    width: 100%;
+    height: 140px;
+    z-index: 1;
+    position: absolute;
+    top: 650px;
+    left: 0%;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service input[type=email] {
+    width: 400px;
+    border:2px solid #b3b0af;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+.service input[type="button"] {
+    width: 200px;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
 
 }
 
