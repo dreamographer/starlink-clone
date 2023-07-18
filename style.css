@@ -2,14 +2,21 @@
     background-color: black;
     margin: 0;
     padding: 0;
-    font-family: poppins;
+    font-family: din;
     color: white;
     overflow-x: hidden;
+}
+p{
+    font-family:poppins ;
+}
+p,h1,h2,h3{
+    cursor:default;
+   
 }
 
 .heading {
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     object-fit: cover;
     overflow: hidden;
 
@@ -35,17 +42,16 @@
     display: flex;
     position: absolute;
     width: 70%;
-    left: 300px;
-    top:25px;
+    left: 280px;
+    top:20px;
 
 }
 .list li{
     border: 0;
-    font-family: sans-serif;
     display: flex;
     justify-content: space-evenly;
     padding : 20px 0px 0px 0px;
-    font-size: 14px;
+    font-size: 12px;
 }
 u{
     text-decoration: none;
@@ -108,6 +114,7 @@ u{
   #h:checked ~ div.white{
     opacity: 1;
     transition: .5s opacity ease-in;
+    z-index: 1;
   }
 
   #h:not(:checked)~ div.white{
@@ -144,9 +151,9 @@ u{
 .white{
     position: absolute;
     background: rgba(250, 250, 250, 0.171);
-    height: 1045vh;
+    height: 1000vh;
     width: 203.3vh;
-    z-index: 1;
+    z-index: -1;
 }
 .menu {
     position: absolute;
@@ -203,7 +210,7 @@ u{
     padding-left: 15%;
 }
 li{
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
     font-weight: bold;
     font-size: 15px;
     padding: 20px;
@@ -213,15 +220,18 @@ li{
 
 #img1 {
     width: 100%;
-    height: 120vh;
+    height: 110vh;
 
+}
+.service *{
+    overflow: hidden;
 }
 .service{
     width: 100%;
-    height: 140px;
-    z-index: 1;
+    height: auto;
+    
     position: absolute;
-    top: 650px;
+    top: 580px;
     left: 0%;
     right: 50%;
     display: flex;
@@ -238,12 +248,45 @@ li{
 }
 
 .service input[type="button"] {
+ 
+    cursor: pointer;
     width: 200px;
     background-color: white;
     color: black;
     border-radius: 6px;
 
 }
+#arwp1{
+    width: 19px;
+    position: absolute;
+    top: 70px;
+    right: 577px;
+}
+
+#arwp{
+    width: 40px;
+}
+#arwp1 #arw{
+    max-width: 100%;  
+height: auto;  
+filter: invert();
+transform: rotate(-90deg);
+}
+
+#arw1{
+    max-width: 100%;  
+height: auto;  
+animation: blink 2s infinite;
+filter: invert();
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+
+/* main body */
 
 .stream {
     width: 100%;
@@ -267,22 +310,76 @@ img {
 }
 
 .txt {
+    overflow: hidden;
     width: 50%;
     height: 100vh;
 
 }
+.content{
+
+    padding-top: 140px;
+    padding-left: 90px;
+    padding-right: 150px;
+}
+.content h1{
+    overflow: hidden;
+    font-size: 45px;
+    line-height: 40px;
+}
+.content p{
+    font-size: 14px;
+}
+
+#btn1{
+    font-family: DIN;
+    z-index: 1;
+    width: 290px;
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    cursor:pointer;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 20px;
+}
+
+#btn{
+    font-family: DIN;
+   z-index: 1;
+    width: 290px;
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    cursor:pointer;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+.travel{
+    position: relative;
+
+}
+.txt4 *{
+    background-color: transparent;
+}
+.txt4{
+    width: 50%;
+
+    background-color: transparent;
+    position: absolute;
+    top:0 ;
+    left: 50px;
+}
+
+/* CUStomer Quotes */
+
 
 .cust {
     display: flex;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     position: relative;
     color: white;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background: #262726;
-
-
 }
 
 .cust * {
@@ -292,27 +389,29 @@ img {
 
 .qtxt {
     display: flex;
-    width: 0px;
+
 }
 
 .qtxt p {
-    font-family: poppins semibold;
+    font-family: din;
     position: absolute;
     text-align: center;
     font-size: 50px;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .txt1 {
     font-size: 23PX;
+    width: 300px;
+    margin-top: 100PX;
 
 }
 
 .txt1 p {
-    font-family: poppins light;
-    padding: 90px 60px;
+
+    /* padding: 90px 60px; */
     text-align: center;
 
 }
@@ -364,10 +463,14 @@ input {
 input[type=email] {
     padding-left: 30px;
     margin-right: 20px;
-    border: 1px solid #f54337;
+    border: .5px solid #f54337;
+    border-style: solid;
+    outline:.5px solid #f54337;
 }
 
 input[type="button"] {
+    z-index: 1;
+    cursor: pointer;
     color: #838383;
     background-color: #4c4c4d;
     width: 80px;
